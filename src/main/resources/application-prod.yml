@@ -18,19 +18,19 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwt-set-uri: https://okrbiz.com:8080/realms/5240/protocol/openid-connect/certs
-          issuer-uri: https://okrbiz.com:8080/realms/5240
+          jwt-set-uri: https://okrbiz.com/realms/5240/protocol/openid-connect/certs
+          issuer-uri: https://okrbiz.com/realms/5240
       client:
         provider:
           keycloak:
-            issuer-uri: https://okrbiz.com:8080/realms/5240
+            issuer-uri: https://okrbiz.com/realms/5240
         registration:
           keycloak:
             client-id: 5240-client
             # client-id: client ??
             client-secret: M43VdyVXcJUABl8hegNZDdeE5lGmgrwJ
             authorization-grant-type: authorization_code
-            redirect-uri: https://okrbiz.com/login/oauth2/code/keycloak
+            redirect-uri: https://okrbiz.com:8080/login/oauth2/code/keycloak
             scope:
               - openid
               - profile
@@ -42,7 +42,7 @@ keycloak:
   # realm: realm ??
   resource: 5240-client
   # resource: client ??
-  auth-server-url: https://okrbiz.com:8080/
+  auth-server-url: https://okrbiz.com/
   # auth-server-url: http://??? ???url:port/
   credentials:
     secret: M43VdyVXcJUABl8hegNZDdeE5lGmgrwJ
@@ -55,4 +55,4 @@ server:
   port: 8000
 
 user:
-  redirect: https://okrbiz.com/
+  redirect: https://okrbiz.com:8080/
