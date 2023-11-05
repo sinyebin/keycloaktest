@@ -38,9 +38,9 @@ spring:
 
 
 keycloak:
-  realm: springtest
+  realm: 5240
   # realm: realm ??
-  resource: spring-test
+  resource: 5240-client
   # resource: client ??
   auth-server-url: https://okrbiz.com:8080/
   # auth-server-url: http://??? ???url:port/
