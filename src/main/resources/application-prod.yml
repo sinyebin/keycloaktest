@@ -18,17 +18,17 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwt-set-uri: https://okrbiz.com:8443/realms/springtest/protocol/openid-connect/certs
-          issuer-uri: https://okrbiz.com:8443/realms/springtest
+          jwt-set-uri: https://okrbiz.com:8080/realms/5240/protocol/openid-connect/certs
+          issuer-uri: https://okrbiz.com:8080/realms/5240
       client:
         provider:
           keycloak:
-            issuer-uri: https://okrbiz.com:8443/realms/springtest
+            issuer-uri: https://okrbiz.com:8080/realms/5240
         registration:
           keycloak:
-            client-id: spring-test
+            client-id: 5240-client
             # client-id: client ??
-            client-secret: n7vMLTjRG8Ptjwe3DgjcDMcM09TnOceK
+            client-secret: M43VdyVXcJUABl8hegNZDdeE5lGmgrwJ
             authorization-grant-type: authorization_code
             redirect-uri: '{baseUrl}/login/oauth2/code/keycloak'
             scope:
@@ -42,10 +42,10 @@ keycloak:
   # realm: realm ??
   resource: spring-test
   # resource: client ??
-  auth-server-url: https://okrbiz.com:8443
+  auth-server-url: https://okrbiz.com:8080/
   # auth-server-url: http://??? ???url:port/
   credentials:
-    secret: n7vMLTjRG8Ptjwe3DgjcDMcM09TnOceK
+    secret: M43VdyVXcJUABl8hegNZDdeE5lGmgrwJ
   use-resource-role-mappings: true
   bearer-only: true
   ssl-required: external
