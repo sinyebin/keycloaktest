@@ -1,6 +1,6 @@
 spring:
   profiles:
-    default: prod
+    default: local
 ---
 spring:
   profiles:

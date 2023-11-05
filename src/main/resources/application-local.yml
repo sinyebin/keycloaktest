@@ -55,3 +55,6 @@ keycloak:
   bearer-only: true
   ssl-required: external
   principal-attribute: preferred_username
+
+user:
+  redirect: http://localhost:8080/
