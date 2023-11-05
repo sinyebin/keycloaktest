@@ -66,7 +66,7 @@ public class SecurityConfiguration {
                             } else {
                                 // ID 토큰이 없는 경우의 처리
                                 String logoutUrl = authServerUrl + "realms/" + realm +
-                                        "/protocol/openid-connect/logout?redirect_uri=";
+                                        "/protocol/openid-connect/logout";
                                 response.sendRedirect(logoutUrl);
                             }
 
